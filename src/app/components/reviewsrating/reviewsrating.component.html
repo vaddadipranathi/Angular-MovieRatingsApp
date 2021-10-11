@@ -1,0 +1,49 @@
+<!-- <p>reviewsrating works!</p> -->
+
+<div class="container">
+<div class="row">
+    <div class="col-md-4 " *ngFor="let m of data">
+        
+          <div class="card" style="padding:100; margin-bottom: 10px;width: 15rem;">
+            <img class="card-img-top" src="{{m?.Poster}}"  alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Title: {{m.Title}}</h5>
+              <p class="card-text">Year: {{m.Year}}</p>
+              <p class="card-text">Directors: {{m.Director}}</p>
+              <p class="card-text">Released: {{m.Released}}</p>
+              <p class="card-text" *ngFor="let rate of getRating(m.Rating)" style="float:left; color:goldenrod;">
+                <i class="fa fa-star checked"></i>
+              </p>
+              <p>  </p>
+              <button (click)=" DeleteMovies(m)" class="btn btn-primary">
+                <i class="fa fa-trash-o"></i>
+              </button>
+              <!-- <div   *ngIf="v==='10'">
+                <span class="fa fa-star-o" data-jest="empty star"></span>
+                <span class="fa fa-star-o" data-jest="empty star"></span>
+                <span class="fa fa-star-o" data-jest="empty star"></span>
+                <span class="fa fa-star-o" data-jest="empty star"></span>
+              </div>
+              
+              <ng-container *ngIf="v ===9">
+                <span class="fa fa-star checked" data-jest="full star"></span>
+                <span class="fa fa-star checked" data-jest="full star"></span>
+                <span class="fa fa-star checked" data-jest="full star"></span>
+                <span class="fa fa-star checked" data-jest="full star"></span>
+                <span class="fa fa-star checked" data-jest="full star"></span>
+              </ng-container>
+                -->
+            
+               
+              <!-- <a href="/add/0" class="btn btn-primary">Go somewhere</a>  -->
+             
+            </div>
+           
+          </div>
+
+   
+
+      </div>
+    
+    </div>
+</div>
